@@ -56,25 +56,6 @@ module.exports = (app) => {
     return reply.json(response);
   });
 
-  app.patch('/ong/:id', validators.patchValidator(), async (request, reply) => {
-    /*  #swagger.parameters['patch ong object'] = {
-            in: 'body',
-            description: "New ong values",
-            schema: {
-                "$name": "new ong",
-                "$description": "ong description",
-                "$email": "aaa@aaa.com",
-                "$phone": "(19) 99999-9999"
-            }
-    } */
-    const errors = validators.validateRequest(request);
-    if (errors.length > 0) {
-      return invalidRequestReply(request, reply, errors);
-    }
-    const response = await controller.patch(request.params.id, request, reply);
-    return reply.json(response);
-  });
-
   app.delete('/ong/:id', async (request, reply) => {
     const response = await controller.delete(request.params.id, request, reply);
     return reply.json(response);

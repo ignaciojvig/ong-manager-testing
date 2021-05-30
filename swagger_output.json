@@ -128,55 +128,6 @@
           }
         }
       },
-      "patch": {
-        "tags": [],
-        "description": "",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "patch ong object",
-            "in": "body",
-            "description": "New ong values",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "name": {
-                  "type": "string",
-                  "example": "new ong"
-                },
-                "description": {
-                  "type": "string",
-                  "example": "ong description"
-                },
-                "email": {
-                  "type": "string",
-                  "example": "aaa@aaa.com"
-                },
-                "phone": {
-                  "type": "string",
-                  "example": "(19) 99999-9999"
-                }
-              },
-              "required": [
-                "name",
-                "description",
-                "email",
-                "phone"
-              ]
-            }
-          }
-        ],
-        "responses": {
-          "400": {
-            "description": "Bad Request"
-          }
-        }
-      },
       "delete": {
         "tags": [],
         "description": "",

@@ -20,11 +20,6 @@ exports.put = async (id, request) => {
   return result;
 };
 
-exports.patch = async (id, request) => {
-  const result = await ongService.patch(id, request.body);
-  return result;
-};
-
 exports.delete = async (id) => {
   const result = await ongService.delete(id);
   return result;
