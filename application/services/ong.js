@@ -28,11 +28,7 @@ exports.findAll = async (ong) => {
 
 exports.findById = async (id) => {
   try {
-    const ongs = await Ong.findAll({
-      where: {
-        id,
-      },
-    });
+    const ongs = await Ong.findByPk(id);
     return ongs;
   } catch (err) {
     console.log(err);
